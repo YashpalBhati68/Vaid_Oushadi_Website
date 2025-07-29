@@ -1,0 +1,966 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Ibarra Real Nova", serif;
+}
+.carousel-inner img {
+  /* width: 100%; */
+  /* height: 100%; */
+}
+.header .active {
+  color: rgb(83, 112, 11) !important;
+  border-bottom: 2px solid;
+}
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  background-color: #f3efef;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 0px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 8px;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #000;
+  display: block;
+  transition: 0.3s;
+  font-family: "Ibarra Real Nova", serif;
+}
+.sidebarHeader {
+  display: flex;
+  justify-content: space-between;
+}
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+.header {
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 99999;
+  background-color: white;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
+}
+
+.header.is-sticky {
+  background-color: rgba(255, 255, 255, 0.5);
+  position: fixed;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  backdrop-filter: blur(10px);
+  animation: slideDown 0.35s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.header nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 20px;
+  align-items: center;
+}
+.navLogo {
+  margin-left: 20px;
+  margin: 0 10px;
+}
+.navLogo > img {
+  border-radius: 50%;
+}
+.navOption {
+  color: black;
+  font-weight: 700;
+  font-family: "Ibarra Real Nova", serif;
+  font-weight: bold;
+  padding: 5px;
+  padding-bottom: 0 !important;
+  margin-right: 20px;
+}
+.navOption:last-child {
+  /* margin-right: 0; */
+}
+.navOption:hover {
+  color: rgb(83, 112, 11);
+}
+
+.aboutHeroSection {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroSectionimg {
+  background-image: url("comman_banner.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  object-fit: contain;
+  /* background-color: red; */
+  margin: 0;
+  height: 70vh;
+  width: 100%;
+  filter: brightness(50%); /* Adjust the brightness here */
+}
+.txt {
+  position: absolute;
+  z-index: 2; /* Ensure it is above the background image */
+  color: white; /* Text color */
+  font-size: 2em; /* Adjust size as needed */
+  text-align: center; /* Center text horizontally */
+  padding: 20px;
+}
+
+.txt > h1 {
+  line-height: 0.2;
+  margin-bottom: 0;
+}
+.txt > span {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+/* ---------------------------ABOUT DETIALS  */
+.aboutDetails {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+#img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.aboutDetailsContent {
+  text-align: left;
+}
+.aboutDetailsContent > h1 {
+  font-weight: 700;
+  /* font-size: 33px; */
+  margin-top: 10px;
+}
+/* ------------------------------- Footer ---------------------------*/
+.footerColor {
+  background: linear-gradient(
+    90deg,
+    hsla(77, 61%, 73%, 1) 0%,
+    hsla(77, 61%, 66%, 1) 100%
+  );
+  /* height: 40vh; */
+  display: flex;
+  align-items: center;
+  padding: 40px 0 0 0;
+}
+.footerColor .row .col-sm-2,
+.footerColor .row .col-sm-10 {
+  padding: 0;
+}
+.footerLogo {
+  /* height: 150px; */
+  /* width: 150px; */
+  border-radius: 50%;
+  /* background-color: white; */
+  /* padding: 40px; */
+}
+
+.footerButtonsWrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+.footerButtons {
+  border-bottom: 2px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  width: 100%;
+  /* align-items: center; */
+}
+
+.footerButtons > a {
+  color: black;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 600;
+  margin-left: 20px;
+  font-family: "Ibarra Real Nova", serif;
+}
+
+.footerIcons {
+  display: flex;
+  justify-content: end;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 15px;
+}
+.footerIcons i {
+  color: black;
+  background-color: rgb(125, 159, 38, 1);
+  padding: 5px;
+  margin-left: 5px;
+  border-radius: 5px;
+  border: 2px solid white;
+}
+.footerIcons i:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  transition-duration: 0.5s;
+}
+
+/* **************************************** contact page css ********************************** */
+
+.cardSection {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.cards {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 15px;
+  width: 350px;
+  border-bottom: 6px solid #c4c4c4;
+  border-top: 1px solid #c4c4c4;
+  border-left: 1px solid #c4c4c4;
+  border-right: 1px solid #c4c4c4;
+  text-align: center;
+}
+.cards p {
+  line-height: 5px;
+}
+
+/* *********************************** Services page css ******************************** */
+.icons {
+  width: 50px;
+  height: 50px;
+}
+.ServicesInfo {
+  display: flex;
+}
+.services_img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.services_detials {
+  text-align: left;
+}
+
+.services_detials > h3 {
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 25px;
+}
+.services_detials > p {
+  font-size: 13px;
+}
+/* *********************************** Home section css *********************************** */
+.carousel-inner {
+  height: 100%;
+}
+.carousel-caption {
+  position: absolute;
+  top: 0%;
+  left: 10%;
+  width: fit-content;
+  height: fit-content;
+}
+.carousel-caption h1 {
+  color: black;
+  font-weight: bold;
+  text-align: left;
+  color: rgb(83, 112, 11);
+}
+
+.carouselSection {
+  width: 100%;
+  height: 95vh;
+  /* background-size: cover; */
+  object-fit: cover;
+}
+
+.carousel-indicators .active {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: black !important;
+}
+.carousel-indicators [data-bs-target] {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: grey;
+}
+.carousel-control-prev {
+  background: grey;
+  height: fit-content;
+  width: fit-content;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  border-radius: 50%;
+}
+.carousel-control-next {
+  background: grey;
+  height: fit-content;
+  width: fit-content;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.txts {
+  font-size: 35px;
+  font-weight: 800;
+  font-family: "Ibarra Real Nova", serif;
+  text-align: center;
+  color: rgb(83, 112, 11);
+  margin-bottom: 30px;
+  border-bottom: 4px solid rgb(83, 112, 11);
+  /* width: fit-content; */
+  /* text-align: center; */
+}
+
+.imgs {
+  width: 492px;
+}
+
+.CardsSection {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.offerSection {
+  padding: 50px 0 70px 0;
+}
+
+.productsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.Card1 {
+  border-radius: 20px 20px 100px 20px;
+  display: flex;
+  width: 46%;
+  overflow: hidden;
+  transition: box-shadow 0.3s;
+  margin: 0 auto;
+}
+
+.Card1:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+}
+.cardImg {
+  height: 400px;
+  width: auto;
+  object-fit: cover;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 20px;
+}
+.desc {
+  text-align: left;
+}
+.desc > img {
+  margin-bottom: 15px;
+}
+
+.desc .card-title {
+  font-family: "Ibarra Real Nova", serif;
+  margin-bottom: 0 !important;
+  font-weight: 700 !important;
+  margin-bottom: 15px !important;
+}
+.desc .card-text {
+  font-family: "Poppins", serif;
+  font-size: 12px;
+  text-align: justify;
+  margin-bottom: 15px !important;
+}
+.desc .productPrice {
+  color: rgb(83, 112, 11);
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 0px !important;
+}
+
+.newProduct {
+  position: absolute;
+  left: 39%;
+  top: 40%;
+  color: white;
+  font-weight: bold !important;
+  font-size: 26px;
+}
+
+.orderBtn {
+  background-color: rgb(83, 112, 11);
+  font-family: "Ibarra Real Nova", serif;
+  color: white;
+  font-weight: 600;
+}
+.orderBtn:hover {
+  border: 1px solid rgb(83, 112, 11);
+  color: rgb(83, 112, 11) !important;
+  font-weight: 600 !important;
+}
+.orderBtn:hover i.fa-brands.fa-whatsapp {
+  color: rgb(83, 112, 11) !important;
+  font-weight: 600;
+}
+
+/* consult with doctor */
+.consultWithDoctor {
+  /* background-color: red; */
+  background-image: url("bg3.png");
+  width: 100%;
+  padding: 0px 30px 0 30px;
+  background-repeat: no-repeat;
+  background-size: 15%;
+  /* z-index: 1; */
+  background-position: bottom right;
+}
+.consultWithDoctorCard {
+  /* background-color: #F2F8E3; */
+  z-index: 0;
+  border-radius: 20px;
+  padding: 30px 0 0 30px;
+}
+.badge50Off {
+  height: fit-content;
+  padding: 0px 10px;
+  color: white;
+  border-radius: 3px;
+}
+.consultWithDoctorCard h3 {
+  color: rgb(83, 112, 11);
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+.consultWithDoctorCard span {
+  font-weight: 600;
+}
+
+.whyChoose {
+  display: flex;
+  flex-wrap: wrap;
+}
+.whyChoose .qualityCard {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 10px;
+  text-align: center;
+  width: 46%;
+  height: fit-content;
+}
+.whyChoose .qualityCard:nth-child(2),
+.whyChoose .qualityCard:nth-child(4) {
+  margin-top: 40px;
+}
+.whyChoose .qualityCard > img {
+  height: 80px;
+  width: 80px;
+}
+.iconsRow {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 15px;
+}
+.overlapColumn {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+.overlapColumn > .iconsSection {
+  margin-bottom: 5px !important;
+}
+.overlapColumn > h4 {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+}
+.iconsSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(191, 221, 115, 1);
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  margin: 20px 0;
+}
+.iconsImg {
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+}
+.containers {
+  position: relative;
+}
+.aboutProductsContainer {
+  margin-top: 140px;
+  background: rgba(250, 250, 250, 1);
+  padding-right: 20px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.greenContainer {
+  background: #f2f8e3;
+  padding: 40px 30px 150px 30px;
+}
+
+.container2 {
+  position: absolute;
+  bottom: -80px;
+  left: 5%;
+  text-align: center;
+  justify-content: center;
+  width: 90%;
+  background-color: white;
+  box-shadow: 0px 0px 25px 10px rgba(166, 166, 166, 0.25);
+  /* margin: 0 50px; */
+  border-radius: 10px;
+}
+
+/* hover  */
+
+.hover14 {
+  overflow: hidden;
+}
+
+.hover14 figure {
+  position: relative;
+}
+.hover14 figure::before {
+  position: absolute;
+  top: 0;
+  left: -75%;
+  z-index: 2;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+  background: -webkit-linear-gradient(
+    left,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  -webkit-transform: skewX(-25deg);
+  transform: skewX(-25deg);
+}
+.hover14 figure:hover::before {
+  -webkit-animation: shine 0.75s;
+  animation: shine 0.75s;
+}
+@-webkit-keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+@keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+
+.whatsappIcon {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: #25d366;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: 0.3s all ease-in-out;
+}
+.whatsappIcon .fa-whatsapp {
+  color: white !important;
+  font-size: 25px;
+}
+.whatsappIcon:hover {
+  background-color: green !important;
+}
+
+/* mobile responsive design */
+.mobileHeader {
+  display: none;
+}
+.sidebarHeader > img {
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+}
+.imgMobileBlock {
+  display: none;
+}
+
+@media screen and (min-width: 320px) and (max-width: 600px) {
+  .txts > img {
+    height: 40px;
+    width: 40px;
+  }
+  .consultWithDoctor {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .overlapColumn {
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .imgMobileBlock {
+    display: block;
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+  }
+  .imgMobileHide {
+    display: none;
+  }
+
+  .mobileAlignCenter {
+    justify-content: center;
+    display: flex;
+  }
+  .header.is-sticky {
+    backdrop-filter: none;
+    background-color: white;
+    height: auto;
+  }
+  .header .active {
+    width: fit-content;
+  }
+  .carouselSection {
+    width: 100%;
+    height: 50vh;
+    object-fit: fill;
+  }
+  .detailsProduct {
+    width: 100% !important;
+    height: 50vh !important;
+    object-fit: fill !important;
+  }
+  .instructions {
+    padding: 0 !important;
+    background-image: none;
+  }
+  .whyChooseUsImg {
+    width: 300px !important;
+    height: 300px !important;
+  }
+  .howtouse {
+    width: 100% !important;
+    border-right: none !important;
+  }
+  .howToTake {
+    margin-bottom: 10px !important;
+  }
+  .howToTake h1 {
+    display: none !important;
+  }
+  .howToTake:last-child {
+    margin-bottom: 30px !important;
+  }
+  .ingredients .qualityCard {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+  }
+  .customer-review {
+    margin-bottom: 20px;
+  }
+  .cards {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .footerLogo {
+    height: 150px;
+    width: 150px;
+  }
+  .carousel-inner {
+    height: 50vh;
+  }
+  .carousel-control-next,
+  .carousel-control-prev {
+    display: none;
+  }
+
+  /* products */
+  .offerSection {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .Card1 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .cardImg {
+    border-top-right-radius: 0px;
+  }
+  .newProduct {
+    color: #000;
+    position: relative;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    font-size: 35px !important;
+  }
+  .mproduct {
+    width: 100%;
+    border-bottom-right-radius: 0;
+    object-fit: cover;
+  }
+
+  /* why choose us */
+  .whyChoose .qualityCard {
+    width: 100%;
+  }
+  .greenContainer {
+    padding: 8px;
+  }
+  .whyChoose .qualityCard:nth-child(2),
+  .whyChoose .qualityCard:nth-child(4) {
+    margin-top: 10px;
+  }
+
+  .container2 {
+    position: relative;
+    margin-bottom: 42%;
+  }
+  .quality2 {
+    padding: 25px;
+  }
+  .dnone {
+    /* display: none; */
+    text-align: center !important;
+  }
+  .aboutProductsContainer {
+    margin-top: 0;
+  }
+  .services_detials > h3 {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  .services_detials > p {
+    font-size: 16px;
+    text-align: justify;
+  }
+  .heroSectionimg {
+    background-size: contain;
+    background-position: top;
+    height: 31vh;
+  }
+  .txt {
+    position: absolute;
+    top: 25%;
+  }
+  .services_img {
+    width: 100%;
+    object-fit: contain;
+    height: auto;
+  }
+  #img {
+    width: 100%;
+    object-fit: contain;
+    height: auto;
+  }
+  .mobileHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .closebtn {
+    background: transparent;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    font-size: 50px !important;
+    z-index: 999999999;
+    padding: 0 !important;
+  }
+  .mobileHeader > h4 {
+    margin-bottom: 0;
+    font-weight: bold;
+    text-align: center;
+  }
+  .header {
+    height: 50px;
+    /* background-color: #b1dc66; */
+    border-bottom: 1px solid #c4c4c4;
+    height: auto;
+  }
+  .nav {
+    display: none;
+  }
+  .navLogo {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .carouselSection {
+    width: 100%;
+    height: 35vh;
+    object-fit: cover;
+  }
+  .carousel-inner {
+    height: 100%;
+  }
+  .offerSection {
+    padding: 20px 0;
+  }
+  .Card1 {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .Card1:last-child {
+    margin-bottom: 0;
+  }
+  .container2 {
+    position: relative;
+  }
+  .contactCard {
+    width: 100%;
+  }
+  .cards {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 100%;
+    padding-bottom: 20px;
+  }
+}
+
+.stretched-link::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: auto;
+  content: "";
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.detailsProduct {
+  height: 550px;
+  width: 100%;
+  object-fit: cover;
+}
+.whychooseContent {
+  margin-bottom: 20px;
+}
+.whychooseContent h6 {
+  margin-bottom: 2px;
+}
+.whychooseContent b {
+  color: rgb(83, 112, 11);
+  margin-right: 10px;
+}
+
+.whychooseContent span {
+  color: grey;
+}
+
+.instructions {
+  background-image: url("bg3.png");
+  width: 100%;
+  padding: 0px 30px 0 30px;
+  background-repeat: no-repeat;
+  background-size: 10%;
+  background-position: bottom right;
+}
+.howToTake {
+  display: flex;
+}
+
+.howToTake h1 {
+  background-color: rgb(83, 112, 11);
+  border-radius: 50%;
+  height: 55px;
+  width: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-right: 10px;
+  z-index: 1;
+}
+.howToTake h1::after {
+  content: "";
+  position: relative;
+  top: 55px;
+  left: -9px;
+  bottom: 0px;
+  height: 60px;
+  width: 4px;
+  background-color: rgb(83, 112, 11);
+  z-index: 0;
+}
+.howToTake:last-child h1::after {
+  display: none;
+}
+.ingredients {
+  display: flex;
+  flex-wrap: wrap;
+}
+.ingredients .qualityCard {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 10px;
+  text-align: center;
+  width: 46%;
+}
+
+.customer-review {
+  border: 1px solid #eeeeee;
+  padding: 20px;
+  text-align: center;
+  flex-grow: 1;
+  border-radius: 10px;
+}
